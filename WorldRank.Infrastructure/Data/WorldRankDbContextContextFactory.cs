@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace WorldRank.Infrastructures.Data
+namespace WorldRank.Infrastructure.Data
 {
     public class WorldRankDbContextContextFactory : IDesignTimeDbContextFactory<WorldRankDbContext>
     {

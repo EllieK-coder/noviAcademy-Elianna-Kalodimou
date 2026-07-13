@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WorldRank.Application.Interfaces;
 using WorldRank.Domain.Entities;
 
-namespace WorldRank.Infrastructures.Data;
+namespace WorldRank.Infrastructure.Data;
 
 public class DBPlayerRepository : IPlayerRepository
 {

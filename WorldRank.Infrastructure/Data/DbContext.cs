@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using WorldRank.Domain.Entities;
 
-namespace WorldRank.Infrastructures.Data
+namespace WorldRank.Infrastructure.Data
 {
     public class WorldRankDbContext : DbContext
     {
@@ -26,7 +26,7 @@ namespace WorldRank.Infrastructures.Data
             modelBuilder.Entity<Wallet>(entity =>
             {
                 // Wallet has no single Id field. A player has one wallet per currency,
-                // so the natural (composite) key is PlayerId + Currency — which also
+                // so the natural (composite) key is PlayerId + Currency � which also
                 // matches the uniqueness rule your repositories enforce.
                 entity.HasKey(w => new { w.PlayerId, w.Currency });
 

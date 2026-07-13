@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using WorldRank.Application.Interfaces;
 using WorldRank.Domain.Entities;
 using WorldRank.Domain.Enums;
 
-namespace WorldRank.Infrastructures.Data
+namespace WorldRank.Infrastructure.Data
 {
     public class DBWalletRepository : IWalletRepository
     {
