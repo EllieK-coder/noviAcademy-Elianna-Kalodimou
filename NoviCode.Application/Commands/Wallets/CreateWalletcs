@@ -1,0 +1,8 @@
+﻿using NoviCode.Commands;
+
+namespace NoviCode;
+
+public sealed record CreateWalletCommand(Guid PlayerId, Currency Currency) : ICommand<Wallet?>;
+public sealed record DepositCommand(Guid WalletId, decimal Amount) : ICommand<Wallet?>;
+public sealed record ApplyFundsCommand(Wallet Wallet, decimal Amount, IFundsStrategy Strategy) : ICommand<Wallet?>;
+public sealed record SetWalletBlockedCommand(Wallet Wallet, bool Blocked) : ICommand<Wallet?>;
