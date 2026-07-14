@@ -1,10 +1,12 @@
 ## Visual Studio / .NET gitignore
+
 # Build outputs
 [Bb]in/
 [Oo]bj/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+
 # Visual Studio files
 .vs/
 *.user
@@ -12,9 +14,11 @@
 *.userosscache
 *.sln.docstates
 *.userprefs
+
 # Rider
 .idea/
 *.DotSettings.user
+
 # NuGet
 *.nupkg
 *.snupkg
@@ -25,6 +29,7 @@
 project.lock.json
 project.fragment.lock.json
 artifacts/
+
 # Build results
 [Dd]ebug/
 [Rr]elease/
@@ -36,28 +41,34 @@ x86/
 bld/
 [Bb]uild/
 [Pp]ublish/
+
 # Test results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
 # ASP.NET
 wwwroot/dist/
 bundleconfig.json
+
 # dotnet tools
 .tool-versions
 .dotnet-tools.json
+
 # Environment / secrets
 .env
 .env.*
 appsettings.*.json
 !appsettings.json
 !appsettings.Development.json
+
 # OS
 .DS_Store
 Thumbs.db
 desktop.ini
+
 # Coverage
 coverage*/
 *.coverage
