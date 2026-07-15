@@ -9,6 +9,7 @@ public class PlayersController : ControllerBase
 {
     private readonly IDispatcher _dispatcher;
 
+
     public PlayersController(IDispatcher dispatcher) => _dispatcher = dispatcher;
 
     // POST /players — create a player (PlayerCacheWriteThroughDecorator refreshes the cache).

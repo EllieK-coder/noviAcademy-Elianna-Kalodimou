@@ -23,18 +23,13 @@ public class ApplicationModule : Autofac.Module
         builder.RegisterType<GetAllPlayersHandler>().As<IQueryHandler<GetAllPlayersQuery, IReadOnlyList<Player>>>();
 
         // ---- Query decorators: caching (inner) then logging (outer) ----
-        builder.RegisterGenericDecorator(
-            typeof(CachingQueryHandlerDecorator<,>), typeof(IQueryHandler<,>));
-        builder.RegisterGenericDecorator(
-            typeof(LoggingQueryHandlerDecorator<,>), typeof(IQueryHandler<,>));
+        builder.RegisterGenericDecorator(typeof(CachingQueryHandlerDecorator<,>), typeof(IQueryHandler<,>));
+        builder.RegisterGenericDecorator(typeof(LoggingQueryHandlerDecorator<,>), typeof(IQueryHandler<,>));
 
         // ---- Command decorators: write-through (inner) then logging (outer) ----
-        builder.RegisterGenericDecorator(
-            typeof(WalletCacheWriteThroughDecorator<>), typeof(ICommandHandler<,>));
-        builder.RegisterGenericDecorator(
-            typeof(PlayerCacheWriteThroughDecorator<>), typeof(ICommandHandler<,>));
-        builder.RegisterGenericDecorator(
-            typeof(LoggingCommandHandlerDecorator<,>), typeof(ICommandHandler<,>));
+        builder.RegisterGenericDecorator(typeof(WalletCacheWriteThroughDecorator<>), typeof(ICommandHandler<,>));
+        builder.RegisterGenericDecorator(typeof(PlayerCacheWriteThroughDecorator<>), typeof(ICommandHandler<,>));
+        builder.RegisterGenericDecorator(typeof(LoggingCommandHandlerDecorator<,>), typeof(ICommandHandler<,>));
 
         // ---- Dispatcher ----
         builder.RegisterType<Dispatcher>().As<IDispatcher>();
